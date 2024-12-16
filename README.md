@@ -15,17 +15,26 @@ KubeClick is an open-source CLI tool designed to simplify and speed up your Kube
 
 ### macOS
 ```bash
+# Using Homebrew
+brew tap SecOpsGrogu1/kubeclick
 brew install kubeclick
-```
-
-### Linux (Ubuntu/Debian)
-```bash
-curl -s https://raw.githubusercontent.com/kubeclick/kubeclick/main/install.sh | sudo bash
 ```
 
 ### Windows
 ```powershell
+# Using Chocolatey
 choco install kubeclick
+```
+
+### Manual Installation
+```bash
+# Clone the repository
+git clone https://github.com/SecOpsGrogu1/KubeClick.git
+cd KubeClick
+
+# Build and install
+make build
+sudo mv bin/kc /usr/local/bin/
 ```
 
 ## Quick Start
@@ -62,17 +71,6 @@ kc all
 Requirements:
 - Go 1.21 or higher
 - Make
-
-```bash
-# Clone the repository
-git clone https://github.com/kubeclick/kubeclick.git
-
-# Build
-make build
-
-# Run tests
-make test
-```
 
 ## Contributing
 
