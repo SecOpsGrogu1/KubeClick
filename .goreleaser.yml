@@ -18,18 +18,22 @@ builds:
     binary: kc
     ldflags:
       - -s -w -X main.Version={{.Version}} -X main.BuildTime={{.Date}}
+    mod_timestamp: '{{ .CommitTimestamp }}'
 
 archives:
   - format: binary
-    name_template: "{{ .Binary }}-{{ .Os }}-{{ .Arch }}"
-    replacements:
-      darwin: Darwin
-      linux: Linux
-      windows: Windows
-      amd64: x86_64
+    name_template: >-
+      {{ .Binary }}-
+      {{- .Os }}-
+      {{- if eq .Arch "amd64" }}x86_64
+      {{- else }}{{ .Arch }}{{ end }}
+      {{- if .Arm }}v{{ .Arm }}{{ end }}
+    files:
+      - none*
 
 checksum:
   name_template: 'checksums.txt'
+  algorithm: sha256
 
 snapshot:
   name_template: "{{ incpatch .Version }}-next"
@@ -42,3 +46,12 @@ changelog:
       - '^test:'
       - '^ci:'
       - '^chore:'
+
+release:
+  github:
+    owner: SecOpsGrogu1
+    name: KubeClick
+  draft: false
+  prerelease: auto
+  mode: replace
+  name_template: "v{{.Version}}"

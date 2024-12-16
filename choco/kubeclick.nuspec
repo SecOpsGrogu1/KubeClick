@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>kubeclick</id>
+    <version>0.1.0</version>
+    <title>KubeClick</title>
+    <authors>KubeClick Contributors</authors>
+    <projectUrl>https://github.com/kubeclick/kubeclick</projectUrl>
+    <licenseUrl>https://github.com/kubeclick/kubeclick/blob/main/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <tags>kubernetes kubectl cli</tags>
+    <summary>CLI tool to simplify Kubernetes operations</summary>
+    <description>KubeClick is a CLI tool that simplifies Kubernetes operations by providing intuitive shortcuts for common kubectl commands.</description>
+    <dependencies>
+      <dependency id="kubernetes-cli" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

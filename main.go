@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/SecOpsGrogu1/KubeClick/cmd"
+	"github.com/kubeclick/kubeclick/cmd"
 )
 
 func main() {
