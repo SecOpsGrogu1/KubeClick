@@ -19,7 +19,7 @@ esac
 OS=$(uname -s | tr '[:upper:]' '[:lower:]')
 VERSION="0.1.0"  # This should be updated for each release
 BINARY_NAME="kc"
-DOWNLOAD_URL="https://github.com/SecOpsGrogu1/KubeClick/releases/download/v${VERSION}/${BINARY_NAME}-${OS}-${ARCH}"
+DOWNLOAD_URL="https://github.com/kubeclick/kubeclick/releases/download/v${VERSION}/${BINARY_NAME}-${OS}-${ARCH}"
 
 # Download binary
 echo "Downloading KubeClick..."

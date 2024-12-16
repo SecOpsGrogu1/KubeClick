@@ -15,16 +15,12 @@ KubeClick is an open-source CLI tool designed to simplify and speed up your Kube
 
 ### macOS
 ```bash
-# First, tap our Homebrew repository
-brew tap SecOpsGrogu1/kubeclick
-
-# Then install KubeClick
-brew install SecOpsGrogu1/kubeclick/kubeclick
+brew install kubeclick
 ```
 
 ### Linux (Ubuntu/Debian)
 ```bash
-curl -s https://raw.githubusercontent.com/SecOpsGrogu1/KubeClick/main/install.sh | sudo bash
+curl -s https://raw.githubusercontent.com/kubeclick/kubeclick/main/install.sh | sudo bash
 ```
 
 ### Windows
@@ -69,7 +65,7 @@ Requirements:
 
 ```bash
 # Clone the repository
-git clone https://github.com/SecOpsGrogu1/KubeClick.git
+git clone https://github.com/kubeclick/kubeclick.git
 
 # Build
 make build
